@@ -1,0 +1,73 @@
+#We will create a simple Profit and Loss Statement for a small grocery shop using simple variables and operators and other beginnerfeatures of te Python PL
+
+#Small Grocery Shop sells 500 kg of flour@Usd10/kg, 100 kg sugar@USD3/kg, 200 kg salt@USD5/kg, 200 litre soyabean oil@USD10/litre, 1,000kg Basmati Rice@USD20 per kilogram and 5,000 pieces of free range eggs @USD1 per piece of egg per month.
+
+#Monthly rent is USD 500 and Utility Bills are USD 100 and Wages for 2 Shop Assistants @USD500 per month
+
+#Simple Profit and Loss Calculation is Total Gross Revenue from Sales minus Expenses and then 10% taxes yielding Net Profits after Expoenses and Taxes.
+
+shop_title = "Profit and Loss for Eve Groceries in USD"
+
+#gross revenue from items sold
+
+flour_unit = 500 
+flour_price = 10
+flour_revenue = flour_unit * flour_price
+print(flour_revenue)
+
+sugar_unit = 100 
+sugar_price = 3
+sugar_revenue = sugar_unit * sugar_price
+print(sugar_revenue)
+
+salt_unit = 200 
+salt_price = 5
+salt_revenue = salt_unit * salt_price
+print(salt_revenue)
+
+soyabean_unit = 200 
+soyabean_price = 10
+soyabean_revenue = soyabean_unit * soyabean_price
+print(soyabean_revenue)
+
+basmati_unit = 1000 
+basmati_price = 20
+basmati_revenue = basmati_unit * basmati_price
+print(basmati_revenue)
+
+egg_unit = 5000 
+egg_price = 1
+egg_revenue = egg_unit * egg_price
+print(egg_revenue)
+
+gross_revenue = egg_revenue + soyabean_revenue + basmati_revenue + salt_revenue + sugar_revenue + salt_revenue
+
+print(gross_revenue)
+
+#monthly expenses
+
+wages_assistants_unit = 2
+wages_salaries = 500
+wages_expenses = wages_salaries * wages_assistants_unit
+
+utility_bills_expenses = 100
+
+rent_expenses = 500
+
+total_expenses = wages_expenses + rent_expenses + utility_bills_expenses
+
+print(total_expenses)
+
+profit_before_taxes = gross_revenue - total_expenses
+
+print(profit_before_taxes)
+
+tax_expenses = 0.10 * profit_before_taxes
+
+print(tax_expenses)
+
+net_profit_after_taxes = profit_before_taxes - tax_expenses
+
+print(net_profit_after_taxes)
+ 
+print(str(shop_title) + " : " + str(net_profit_after_taxes))
