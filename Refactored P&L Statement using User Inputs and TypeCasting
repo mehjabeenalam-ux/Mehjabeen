@@ -1,0 +1,126 @@
+#We will refactor the Profit and Loss Statement for Eve Grocery Shop using simple variables, arithmetic operators, print functions, f strings, type casting and user inputs. 
+
+#Small Grocery Shop sells 500 kg of flour@Usd10/kg, 100 kg sugar@USD3/kg, 200 kg salt@USD5/kg, 200 litre soyabean oil@USD10/litre, 1,000kg Basmati Rice@USD20 per kilogram and 5,000 pieces of free range eggs @USD1 per piece of egg per month.
+
+#Monthly rent is USD 500 and Utility Bills are USD 100 and Wages for 2 Shop Assistants @USD500 per month
+
+#Simple Profit and Loss Calculation is Total Gross Revenue from Sales minus Expenses and then 10% taxes yielding Net Profits after Expoenses and Taxes.
+
+shop_title = "Profit and Loss for Eve Groceries in USD"
+print(shop_title)
+
+#gross revenue from items sold
+
+statement = f"Gross Revenue Item Wise Breakdown"
+print(statement)
+
+flour_unit = int(input("Enter total monthly flour sales in kg: "))
+flour_price = int(input("Enter total flour price per kg in USD: "))
+flour_revenue = flour_unit * flour_price
+# print(flour_revenue)
+
+# total_flour_revenue = f"Total Flour Sales is {flour_revenue}"
+# print(total_flour_revenue)
+
+total_flour_revenue = f"Total Flour Sales from {flour_unit} kg at USD{flour_price} is {flour_revenue}"
+print(total_flour_revenue)
+
+sugar_unit = int(input("Enter total monthly sugar sales in kg: "))
+sugar_price = int(input("Enter sugar price per kg in USD: "))
+sugar_revenue = sugar_unit * sugar_price
+#print(sugar_revenue)
+
+total_sugar_revenue = f"Total Sugar Sales from{sugar_unit} kg at USD{sugar_price} is {sugar_revenue}"
+print(total_sugar_revenue)
+
+salt_unit = int(input("Enter total monthly salt sales in kg: "))
+salt_price = int(input("Enter salt price per kg in USD: "))
+salt_revenue = salt_unit * salt_price
+#print(salt_revenue)
+
+total_salt_revenue = f"Total Salt Sales from {salt_unit} kg at USD {sugar_price} is {salt_revenue}"
+print(total_salt_revenue)
+
+soyabean_unit = int(input("Enter total monthly soyabean sales in litres: "))
+soyabean_price = int(input("Enter soyabean price per litre in USD: "))
+soyabean_revenue = soyabean_unit * soyabean_price
+#print(soyabean_revenue)
+
+total_soyabean_revenue = f"Total Soyabean Sales from {soyabean_unit} is {soyabean_revenue}"
+print(total_soyabean_revenue)
+
+basmati_unit = int(input("Enter total monthly basmati sales in kg: "))
+basmati_price = int(input("Enter basmati price per kg in USD: "))
+basmati_revenue = basmati_unit * basmati_price
+#print(basmati_revenue)
+
+total_basmati_revenue = f"Total Basmati Sales from {basmati_unit} kg is USD {basmati_revenue}"
+print(total_basmati_revenue)
+
+egg_unit = int(input("Enter total monthly egg sales in pieces: "))
+egg_price = int(input("Enter egg price per piece in USD: "))
+egg_revenue = egg_unit * egg_price
+# print(egg_revenue)
+
+total_egg_revenue = f"Total Egg Sales from {egg_unit} pieces is USD {egg_revenue}"
+print(total_egg_revenue)
+
+gross_revenue = egg_revenue + soyabean_revenue + basmati_revenue + salt_revenue + sugar_revenue + salt_revenue
+# print(gross_revenue)
+
+revenue_1 = f"Total Gross Revenue is USD {gross_revenue}"
+print(revenue_1)
+
+
+
+#monthly expenses
+
+statement_expenses = f"Gross Expenses Item Wise Breakdown"
+print(statement_expenses)
+
+wages_assistants_unit = int(input("Enter the number of staffs you employ: "))
+wages_salaries = int(input("Enter the wages per assistant in USD: "))
+wages_expenses = wages_salaries * wages_assistants_unit
+
+total_wages_expenses = f"Total Salary Expenses for 2 Shop Assistants are USD {wages_expenses}"
+print(total_wages_expenses)
+
+utility_bills_expenses = int(input("Enter your monthly utility bills in USD: "))
+
+total_utility_expenses = f"Total Utility Expenses is USD {utility_bills_expenses}"
+print(total_utility_expenses)
+
+rent_expenses = int(input("Enter your monthly rental bills in USD: "))
+
+gross_expenses = utility_bills_expenses + rent_expenses + wages_expenses
+
+# total_rent_expenses = f"Total Rent Expenses is USD {rent_expenses}"
+# print(total_rent_expenses)
+# print(gross_expenses)
+
+expenses_1 = f"Total Monthly Gross Expenses is USD {gross_expenses}"
+
+print(expenses_1)
+
+profit_before_taxes = gross_revenue - gross_expenses
+# print(profit_before_taxes)
+
+pbt_1 = f"Profit before Taxes is USD {profit_before_taxes}"
+
+print(pbt_1)
+
+tax_expenses = 0.10 * profit_before_taxes
+
+tax_expense_1 = f"Tax Expense at 10% on Net Profit after Expenses"
+print(tax_expense_1)
+
+net_profit_after_taxes = profit_before_taxes - tax_expenses
+
+# print(net_profit_after_taxes)
+
+pat_1 = f"Profit after Tax for Eve Groceries stands at USD{net_profit_after_taxes}"
+
+print(pat_1)
+ 
+
+
