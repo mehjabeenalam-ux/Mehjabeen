@@ -75,6 +75,9 @@ print(revenue_1)
 
 #monthly expenses
 
+statement_expenses = f"Gross Expenses Item Wise Breakdown"
+print(statement_expenses)
+
 wages_assistants_unit = 2
 wages_salaries = 500
 wages_expenses = wages_salaries * wages_assistants_unit
@@ -118,4 +121,8 @@ net_profit_after_taxes = profit_before_taxes - tax_expenses
 pat_1 = f"Profit after Tax for Eve Groceries stands at USD{net_profit_after_taxes}"
 
 print(pat_1)
+ 
+
+
+
  
