@@ -1,0 +1,39 @@
+#Nested Dictionaries for Basmati Rice sourced from 4 suppliers from India and Pakistan (2 each)
+basmati_varieties = {
+  "basmati_1" : {
+    "Brand": "FGY",
+    "Price": "10",
+    "Quantity": "4000 kg",
+    "Country of Origin": "India",
+    "Shipment date": "October 2025",
+    "Expiry Date": "December 2026"
+  },
+  "basmati_2" : {
+    "Brand": "NDM",
+    "Price": "11",
+    "Quantity": "5000 kg",
+    "Country of Origin": "India",
+    "Shipment date": "June 2025",
+    "Expiry Date": "June 2026"
+  },
+  "basmati_3" : {
+    "Brand": "M&M",
+    "Price": "14",
+    "Quantity": "9000 kg",
+    "Country of Origin": "Pakistan",
+    "Shipment date": "January 2025",
+    "Expiry Date": "February 2026"
+  },
+  "basmati_4" : {
+    "Brand": "Shan",
+    "Price": "9",
+    "Quantity": "8000 kg",
+    "Country of Origin": "Pakistan",
+    "Shipment date": "July 2025",
+    "Expiry Date": "November 2026"
+  }
+}
+
+print(basmati_varieties)
+
+print(f"Sourcing Details of Basmati Rice {basmati_varieties}")
