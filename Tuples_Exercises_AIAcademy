@@ -1,0 +1,153 @@
+#Tuples
+
+#Creating and Printing values of Empty, Numbers, Strings, Mixed, Duplicate Values, Nested, Single element tuple, without parentheses and Constructor Tuples
+
+empty_tuple = ()
+numbers = (1, 2, 3, 4, 5)
+fruits = ("apple", "banana", "cherry")
+mixed = (1, "hello", 3.14, True)
+duplicates = (1, 2, 2, 3, 3, 3)
+nested = ((1, 2), (3, 4), (5, 6))
+single = (5,)  # Comma is required
+not_tuple = (5)  # This is just an integer, not a tuple
+coordinates = 10, 20, 30
+converted_string = tuple("Bangladesh")
+converted_number = tuple((1, 2, 3, 4, 5))
+
+print(empty_tuple)
+print(numbers)
+print(fruits)
+print(mixed)
+print(duplicates)
+print(nested)
+print(single)
+print(not_tuple)
+print(type(coordinates))  # <class 'tuple'>
+print(converted_string)
+print(converted_number)
+
+
+#TuplesAccessibility
+
+fruits = ("apple", "banana", "cherry", "date", "elderberry")
+
+# Indexing
+print(fruits[0])   # apple
+print(fruits[-1])  # elderberry
+
+# Slicing
+print(fruits[1:4])  # ('banana', 'cherry', 'date')
+print(fruits[:3])   # ('apple', 'banana', 'cherry')
+print(fruits[::2])  # ('apple', 'cherry', 'elderberry')
+
+
+
+#TuplesImmutability
+
+numbers_1 = (1, 2, 3, 4, 5)
+
+# This will cause an error
+# numbers[0] = 100  # TypeError: 'tuple' object does not support item assignment
+# numbers.append(6)  # AttributeError: 'tuple' object has no attribute 'append'
+
+# However, if a tuple contains mutable objects, those can be modified
+mixed_1 = ([1, 2, 3], "hello", 5)
+mixed_1[0][0] = 100  # This is allowed
+print(mixed_1)  # ([100, 2, 3], 'hello', 5)
+
+# You can create a new tuple from an existing one
+new_numbers = numbers_1 + (6, 7, 8)
+print(new_numbers)  # (1, 2, 3, 4, 5, 6, 7, 8)
+
+
+
+#TuplesMethods
+
+numbers_2 = (1, 2, 3, 2, 4, 2, 5)
+
+# count() - returns number of occurrences
+print(numbers_2.count(2))  # 3
+
+# index() - returns index of first occurrence
+print(numbers_2.index(4))  # 4
+print(numbers_2.index(2))  # 1 (first occurrence)
+
+
+#TuplesOperations
+
+numbers_3 = (1, 2, 3, 4, 5)
+
+# Length
+print(len(numbers_3))  # 5
+
+# Check membership
+print(3 in numbers_3)  # True
+
+# Concatenation
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+combined = tuple1 + tuple2
+print(combined)  # (1, 2, 3, 4, 5, 6)
+
+# Repetition
+repeated = (1, 2) * 3
+print(repeated)  # (1, 2, 1, 2, 1, 2)
+
+# Mathematical operations
+print(sum(numbers_3))  # 15
+print(min(numbers_3))  # 1
+print(max(numbers_3))  # 5
+
+# Iterating
+for num in numbers_3:
+    print(num)
+
+
+
+
+#TuplesUnpacking
+
+# Basic unpacking
+coordinates = (10, 20, 30)
+x, y, z = coordinates
+print(x)  # 10
+print(y)  # 20
+print(z)  # 30
+
+# Unpacking with * (rest operator)
+numbers = (1, 2, 3, 4, 5)
+first, *middle, last = numbers
+print(first)   # 1
+print(middle)  # [2, 3, 4] (note: becomes a list)
+print(last)    # 5
+
+# Swapping variables using tuple unpacking
+a = 5
+b = 10
+a, b = b, a  # Swap values
+print(a)  # 10
+print(b)  # 5
+
+# Returning multiple values from a function
+def get_stats(numbers):
+    return min(numbers), max(numbers), sum(numbers)
+
+minimum, maximum, total = get_stats([1, 2, 3, 4, 5])
+print(minimum, maximum, total)  # 1 5 15
+
+
+
+#ConvertingTuplesToLists
+
+my_tuple = (4, 5, 6)
+my_list = list(my_tuple)
+print(my_list)  # [4, 5, 6]
+
+
+
+#ConvertingListsToTuples
+
+# List to tuple
+my_list = [1, 2, 3]
+my_tuple = tuple(my_list)
+print(my_tuple)  # (1, 2, 3)
