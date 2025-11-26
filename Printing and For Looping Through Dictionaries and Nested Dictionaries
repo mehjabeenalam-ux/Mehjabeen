@@ -1,0 +1,104 @@
+#Dictionaries
+
+#A Python dictionary is a collection of items, similar to lists and tuples. However, unlike lists and tuples, each item in a dictionary is a key-value pair (consisting of a key and a value).
+
+#Creating and Printing values of Empty, Strings, With and Without Function and Nested Dictionaries
+
+empty_dict = {}
+
+country_capitals_with_function = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+country_capitals_without_function = {"Germany": "Berlin", "Canada": "Ottawa", "England": "London"}
+
+print(empty_dict)
+print(country_capitals_with_function)
+print(country_capitals_without_function)
+
+# # Print dictionary keys one by one
+for country in country_capitals_with_function:
+    print(country)
+
+# #Print Dictionary Values
+
+for value in country_capitals_without_function.values():
+    print(value)
+
+# #Print Key Pair Dictionary Values 
+
+for key, value in country_capitals_without_function.items():
+    print(f"{key}: {value}")
+
+# #Dictionary Iteration via For Loops
+
+for key in country_capitals_without_function:
+    value = country_capitals_without_function[key]
+    print(f"{key}: {value}")
+
+# #1. Iterating through Keys (Default):
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key in my_dict:
+    print(key)
+
+# #2. Iterating through Values:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for value in my_dict.values():
+    print(value)
+
+# #3. Iterating through Key-Value Pairs:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+# #4. Accessing Values when Iterating through Keys:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key in my_dict:
+    value = my_dict[key]
+    print(f"{key}: {value}")
+
+#NestedDictionaries
+
+Continent_Capitals = {
+    "Europe":{
+        "Germany": "Berlin", 
+        "Canada": "Ottawa", 
+        "England": "London"
+        },
+    "Asia": {
+        "Bangladesh": "Dhaka", 
+        "China": "Beijing", 
+        "Malaysia": "Kuala Lumpur"
+        },
+    "MiddleEast": {
+        "UAE": "Dubai", 
+        "Oman": "Salala", 
+        "Saudia Arabia": "Jeddah"
+        }
+}
+
+
+print(Continent_Capitals)
+
+# print dictionary keys one by one
+for continent in Continent_Capitals:
+    print(continent)
+
+for key in Continent_Capitals:
+    print(key)
+
+for value in Continent_Capitals.values():
+    print(value)
+
+for key, value in Continent_Capitals.items():
+    print(f"{key}: {value}")
+
+for key in Continent_Capitals:
+    value = Continent_Capitals[key]
+    print(f"{key}: {value}")
+
+
+
+
