@@ -1,0 +1,247 @@
+#Dictionaries
+
+#A Python dictionary is a collection of items, similar to lists and tuples. However, unlike lists and tuples, each item in a dictionary is a key-value pair (consisting of a key and a value).
+
+#Creating and Printing values of Empty, Strings, With and Without Function and Nested Dictionaries
+
+empty_dict = {}
+
+country_capitals_with_function = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+country_capitals_without_function = {"Germany": "Berlin", "Canada": "Ottawa", "England": "London"}
+
+print(empty_dict)
+print(country_capitals_with_function)
+print(country_capitals_without_function)
+
+# # Print dictionary keys one by one
+for country in country_capitals_with_function:
+    print(country)
+
+#Dictionary Iteration
+#Print Dictionary Values
+
+for value in country_capitals_without_function.values():
+    print(value)
+
+# #Print Key Pair Dictionary Values 
+
+for key, value in country_capitals_without_function.items():
+    print(f"{key}: {value}")
+
+# #Dictionary Iteration via For Loops
+
+for key in country_capitals_without_function:
+    value = country_capitals_without_function[key]
+    print(f"{key}: {value}")
+
+# #1. Iterating through Keys (Default):
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key in my_dict:
+    print(key)
+
+# #2. Iterating through Values:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for value in my_dict.values():
+    print(value)
+
+# #3. Iterating through Key-Value Pairs:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
+
+# #4. Accessing Values when Iterating through Keys:
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+for key in my_dict:
+    value = my_dict[key]
+    print(f"{key}: {value}")
+
+#NestedDictionaries
+
+Continent_Capitals = {
+    "Europe":{
+        "Germany": "Berlin", 
+        "Canada": "Ottawa", 
+        "England": "London"
+        },
+    "Asia": {
+        "Bangladesh": "Dhaka", 
+        "China": "Beijing", 
+        "Malaysia": "Kuala Lumpur"
+        },
+    "MiddleEast": {
+        "UAE": "Dubai", 
+        "Oman": "Salala", 
+        "Saudia Arabia": "Jeddah"
+        }
+}
+
+
+print(Continent_Capitals)
+
+# print dictionary keys one by one
+for continent in Continent_Capitals:
+    print(continent)
+
+for key in Continent_Capitals:
+    print(key)
+
+for value in Continent_Capitals.values():
+    print(value)
+
+for key, value in Continent_Capitals.items():
+    print(f"{key}: {value}")
+
+for key in Continent_Capitals:
+    value = Continent_Capitals[key]
+    print(f"{key}: {value}")
+
+
+#Accessing items of a dictionary by referring to its key name, inside square brackets:
+
+country_capitals_with_function = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+x = country_capitals_with_function["Germany"]
+print(x)
+
+#Get Keys: The keys() method will return a list of all the keys in the dictionary.
+
+y = country_capitals_with_function.keys()
+print(y)
+
+#Add a new key
+country_capitals_with_function["France"] = "Paris"
+
+#RePrint y
+print(y)
+
+#Get Values: The values() method will return a list of all the values in the dictionary against their respective keys and will print updated values when new keys and values are added. 
+
+z = country_capitals_with_function.values()
+print(z)
+
+#Add a new value
+country_capitals_with_function["France"] = "Not Paris"
+print(z)
+
+#Checking Membership
+country_capitals_with_function = {
+  "Germany": "Berlin", 
+  "Canada": "Ottawa", 
+  "England": "London"
+}
+
+if "Germany" in country_capitals_with_function:
+  print("Yes, 'Germany' is one of the keys in this dictionary")
+
+if "Netherlands" in country_capitals_with_function:
+  print("Yes, 'Germany' is one of the keys in this dictionary")
+else:
+    print("Key is not present in this Dictionary")
+
+#User Input
+
+country_key = str(input("Enter the key name: "))
+
+if country_key in country_capitals_with_function:
+  print("Yes, this Key exists in this dictionary")
+else:
+    print("Key is not present in this Dictionary")
+
+#Adding and Updating Dictionaries
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "blue"})
+print(thisdict)
+
+#Deleting from Dictionaries
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict.pop("model")
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict.popitem()
+print(thisdict)
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+del thisdict["model"]
+print(thisdict)
+
+# thisdict_1 = {
+#   "brand": "Ford",
+#   "model": "Mustang",
+#   "year": 1964
+# }
+
+# del thisdict_1
+# print(thisdict_1) 
+
+#Yields Error when printed
+
+thisdict_2 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+thisdict_2.clear()
+print(thisdict_2)
+
+
+#Copy Dictionaries: Using copy() and dict() method we can copy Dictionaries. 
+
+#Copy() Method
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+
+#Dict() Method
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = dict(thisdict)
+print(mydict)
