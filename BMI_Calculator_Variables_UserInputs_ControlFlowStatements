@@ -1,0 +1,72 @@
+#BMI Calculator 
+
+#he BMI formula using kilograms and centimeters is BMI = [weight (kg) / height (cm) / height (cm)] x 10,000. Alternatively, you can first convert your height from centimeters to meters by dividing by 100 and then use the formula BMI = weight (kg) / [height (m)]². 
+
+individual_weight_kg = 100
+
+individual_height_cm = 160
+
+body_mass_index =  (individual_weight_kg/individual_height_cm**2)*10000
+
+print(body_mass_index)
+
+#BMI Calculator using User Inputs
+
+individual_weight_kg_1 = int(input("Enter your weight in kilograms: "))
+
+individual_height_cm_1 = int(input("Enter your height in centimeters: "))
+
+
+body_mass_index_1 =  (individual_weight_kg/individual_height_cm**2)*10000
+
+print(body_mass_index_1)
+
+#BMI Calculator with User Inputs and Conditional Statements
+
+#Classifications from : https://www.cdc.gov/bmi/adult-calculator/index.html
+
+# Underweight
+# Below 18.5
+# Healthy Weight
+# 18.5 to 24.9
+# Overweight
+# 25.0 to 29.9
+# Obesity
+# 30.0 or greater
+# Class 1 Obesity
+# 30.0 to 34.9
+# Class 2 Obesity
+# 35.0 to 39.9
+# Class 3 Obesity
+
+# (Severe Obesity)
+
+
+individual_weight_kg_1 = int(input("Enter your weight in kilograms: "))
+
+individual_height_cm_1 = int(input("Enter your height in centimeters: "))
+
+
+body_mass_index_1 =  (individual_weight_kg/individual_height_cm**2)*10000
+
+print(body_mass_index)
+
+bmi_score = body_mass_index_1
+
+if bmi_score <= 18.5:
+    print("You are Underweight")
+elif bmi_score >= 18.5 and bmi_score <= 24.9:
+    print("You are Overweight")
+elif bmi_score >= 25 and bmi_score <= 29.9:
+    print("You are Obese")
+elif bmi_score >= 30:
+    print("You are Class 1 Obese")
+elif bmi_score >= 30 and bmi_score <= 34.9:
+    print("You are Class 2 Obese")
+elif bmi_score >= 35 and bmi_score <= 39.9:
+    print("You are Class 3 Obese")
+else:
+    print("You are Severely Obese")
+
+
+
