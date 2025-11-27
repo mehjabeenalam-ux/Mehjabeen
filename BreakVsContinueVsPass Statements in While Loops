@@ -1,0 +1,32 @@
+#Break Vs Continue Vs Pass Statements used in While Loops
+
+#Break Statement
+
+count = 0
+while count < 10:
+    if count == 3:
+        break  # Exit the loop when count is 3
+    print(f"Current count: {count}")
+    count += 1
+print("Loop finished.")
+
+#Continue Statement
+
+count = 0
+while count < 10:
+    count += 1
+    if count == 3:
+        continue  # Skip printing when count is 3
+    print(f"Current count: {count}")
+print("Loop finished.")
+
+#Pass Statement
+
+count = 0
+while count < 10:
+    if count == 1:
+        pass  # Do nothing when count is 1
+    else:
+        print(f"Current count: {count}")
+    count += 1
+print("Loop finished.")
