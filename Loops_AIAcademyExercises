@@ -1,0 +1,178 @@
+# Loops in Python usually refers to WHile Loop and For Loop. 
+# While Loop will execute a block of codes while the condition is True
+
+# Basic While Loop
+
+value = 1
+while value < 10:
+    print(value)
+    value += 1
+
+value = 1
+while value <= 10:
+    print(value)
+    value += 1
+
+value = 1
+while value <= 10:
+    if value == 5:
+        break 
+    print(value)
+    value += 1
+
+value = 1
+while value <= 10:
+    value += 1
+    if value == 5: 
+        continue 
+    print(value)
+else: 
+    print("Value is now equal to + str(value)")
+
+#Loops are literally life savers for repeat tasks and let's find out how
+
+#Printing integers 1-10 manually without loops
+
+num1 = 1
+num2 = 2
+num3 = 3
+num4 = 4
+num5 = 5
+num6 = 6
+num7 = 7
+num8 = 8
+num9 = 9
+num10 = 10
+
+print(num1)
+print(num2)
+print(num3)
+print(num4)
+print(num5)
+print(num6)
+print(num7)
+print(num8)
+print(num9)
+print(num10)
+
+#printing Integers 1-10 with While Loop
+
+value = 1
+while value < 11:
+    print(value)
+    value +=1
+
+# #printing Integers 1-10 with While Loop in the reverse order
+
+value = 10
+while value > 0:
+    print(value)
+    value -=1
+
+#printing Even Integers between 1-10 with While Loop
+
+let = 2
+while let < 11:
+    print(let)
+    let +=2
+        
+#printing Even Integers between 1-10 in reverse order with While Loop
+
+let = 10
+while let >= 2:
+    print(let)
+    let -=2
+
+
+#For Loop
+
+#Printing even numbers between 1 and 10 using For Loop
+
+for num in range(2,11,2):
+    print(num)
+
+# #Printing numbers in reverse order between 1 and 10 using For Loop
+
+for num in range(10,0,-1):
+    print(num)
+
+# #Printing all numbers between 1 and 10 using For Loop
+
+for num in range(1,11,1):
+    print(num)
+
+#Printing names from a list using For Loop
+
+names = ["Dave", "Sara", "John"]
+for x in names:
+    print(x)
+
+for x in "Mississippi":
+    print(x)
+
+for x in names:
+    if x == "Sara":
+        break
+    print(x)
+
+for x in names:
+    if x == "Sara":
+        continue
+    print(x)
+
+for x in range(4): #Starts at 0 
+    print(x)
+
+for x in range(2, 4): #Starts at 2 and ends at 4 thats why 4 is not printed
+    print(x)
+
+#Printing between 0 and 100
+
+for x in range(0, 100, 5): 
+    print(x)
+
+# #Printing between 5 and 100
+
+for x in range(5, 101, 5): 
+    print(x)
+
+# #printing with differences of 5 between 1 and 100
+
+for x in range(95, 0, -5): 
+    print(x)
+else:
+    print("Glad that\'s over!")
+
+#Nested Loops # Loop through two different lists 
+
+names = ["Dave", "Sara", "John"]
+actions = ["codes", "eats", "sleeps"]
+
+# # for name in names: #OuterLoop
+#     for action in actions: #InnerLoop
+#         print(name +  " " + action +".")
+
+# for action in actions: #OuterLoop
+for name in names: #InnerLoop
+    print(name +  " " + actions +".")
+
+# #List
+nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+
+print(nums)
+
+# print(type(nums))
+
+# #Tupple
+nums1 = ("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+
+print(nums1)
+
+print(type(nums1))
+
+# #Set
+nums2 = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
+
+print(nums2)
+
+print(type(nums2))
