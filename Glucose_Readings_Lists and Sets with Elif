@@ -1,0 +1,63 @@
+#Using Lists to store, read and analyze Glucose Readings of a patient!
+
+#Example 1
+
+#Lists and Computations on Glucose Readings
+#Storing glucose readings of a patient 5 times a day in a sequential manner!
+
+diabetes_readings = [10, 7, 8, 11, 6]
+
+highest_glucose_reading = max(diabetes_readings)
+
+lowest_glucose_reading = min(diabetes_readings)
+
+difference_glucose_reading = highest_glucose_reading - lowest_glucose_reading
+
+average_glucose_reading = sum(diabetes_readings)/len(diabetes_readings)
+
+average_glucose_reading_1 = sum(diabetes_readings)/5
+
+print(highest_glucose_reading)
+print(lowest_glucose_reading)
+print(difference_glucose_reading)
+print(average_glucose_reading_1)
+print(f"Average Glucose Reading is {average_glucose_reading}")
+
+
+#Example 2
+
+#Glucose Readings Classifications
+
+# A set of specific critical low values to monitor (e.g., from a specific device spec)
+critical_low_set = {35, 40, 45}
+
+def classify_glucose_reading(reading):
+    """Classifies a single glucose reading into a category using if/elif/else."""
+    # Source for general ranges: www.niddk.nih.gov
+    
+    if reading in critical_low_set:
+        return "Critical Hypoglycemia (Emergency)"
+    elif reading < 70:
+        return "Hypoglycemia (Low)"
+    elif 70 <= reading <= 180:
+        # The target range often used for people with diabetes
+        return "Normal Range (Time in Range)"
+    elif 180 < reading <= 300:
+        return "Hyperglycemia (High)"
+    else:
+        # reading > 300
+        return "Severe Hyperglycemia (Very High)"
+
+# Example list of insulin/glucose readings
+readings_list = [55, 120, 250, 40, 95, 320, 150, 35]
+
+print("--- Glucose Reading Analysis ---")
+
+# Iterate through the list of readings and apply the classification logic
+for glucose_value in readings_list:
+    status = classify_glucose_reading(glucose_value)
+    print(f"Reading: {glucose_value} mg/dL -> Status: {status}")
+
+print("---")
+# You can also check the set membership directly
+print(f"Are any of the readings in the critical low set {critical_low_set}? {any(r in critical_low_set for r in readings_list)}")
