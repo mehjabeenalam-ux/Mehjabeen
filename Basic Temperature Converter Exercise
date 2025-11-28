@@ -1,0 +1,36 @@
+#Temperature Converter
+
+#Cross checked with the following link
+
+#https://www.calculatorsoup.com/calculators/conversions/temperature.php
+
+#Exercise 01
+
+#Fahrenheit to Celcius Converter
+
+Temperature_in_Fahrenheit = int(input("Enter the temperature in Fahrenheit: "))
+
+Celcius_Conversion = (5/9) * (Temperature_in_Fahrenheit - 32)
+
+print(f"Temperature in Celcius is {Celcius_Conversion} °C")
+
+#Exercise 02
+
+# Celsius_Fahrenheit	°F = °C × 9/5 + 32
+# Celsius_Kelvin	 K = °C + 273.15
+# Celsius_Rankine	°R = °C × 9/5 + 491.67
+# Celsius_Réaumur	°Ré = °C × 4/5
+
+Temperature_in_Celcius = int(input("Enter the temperature in Celcius: "))
+
+Fahrenheit_Conversion = (9/65) * (Temperature_in_Fahrenheit + 32)
+Kelvin_Conversion = Temperature_in_Celcius + 273.15
+Rankine_Conversion = Temperature_in_Celcius*(9/5) + 491.67
+Reaumur_Conversion = Temperature_in_Celcius*(4/5)
+
+print(f"Temperature in Fahrenheit is {Fahrenheit_Conversion:.2f} °F")
+print(f"Temperature in Kelvin is {Kelvin_Conversion:.2f} °K")
+print(f"Temperature in Rankine is {Rankine_Conversion:.2f} °R")
+print(f"Temperature in Reaumur is {Reaumur_Conversion:.2f} °Re")
+
+
