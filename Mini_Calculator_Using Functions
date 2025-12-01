@@ -1,0 +1,34 @@
+
+#Mini Calculator Project 
+
+#Basic Calculations + - / * %
+
+def mini_calculator(num1, num2, operations):
+    if operations == '+':
+        return num1+num2
+    elif operations == '-':
+        return num1-num2
+    elif operations == '/':
+        return num1/num2
+    elif operations == '*':
+        return num1*num2
+    elif operations == '%':
+        return num1%num2
+    
+    
+num1 = int(input("Enter your first number: "))
+num2 = int(input("Enter your second number: "))
+op = input("Enter operations (+ - / * %): ")
+
+try:
+    result = num1 / num2
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+
+print("Result:", mini_calculator(num1, num2, op))
+
+# if num2 != 0:
+#     result = num1 / num2
+# else:
+#     print("Error: Cannot divide by zero.")
