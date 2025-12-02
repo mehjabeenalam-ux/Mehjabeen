@@ -1,0 +1,31 @@
+#Functions with Arguments and Keyword Arguments
+#Functions with Arguments 
+#List of Employees
+
+def employee_names(*args):
+    print(args)
+    print(type(args))
+    print("Employee Names of Eve Groceries:")
+    for item in args:
+        print(f"- {item}")
+
+employee_names("Dave", "John", "Sara", "Adam", "Amy")
+
+#Functions with Keyword Arguments 
+#List of Employees with Names, Salaries, Work Hours, Roles
+
+def employee_list_details(**kwargs):
+    print(kwargs)
+    print(type(kwargs))
+    if kwargs:
+        print("\n--- List of Employee Names with Details ---")
+        for key, value in kwargs.items():
+            print(f"{key}, {value}")
+    else:
+        print("No information Provided")
+
+employee_list_details(name = "Dave", salary = 10000, Work_Hours_Logged = 40, Role = "Sales Assistant")
+employee_list_details(name = "John", salary = 8000, Work_Hours_Logged = 35, Role = "Inventory Manager")
+employee_list_details(name = "Sara", salary = 15000, Work_Hours_Logged = 40, Role = "Store Manager")
+employee_list_details(name = "Adam", salary = 5000, Work_Hours_Logged = 20, Role = "Part Time Accounts Assistant")
+employee_list_details(name = "Amy", salary = 6000, Work_Hours_Logged = 40, Role = "Part Time Sales Assistant")
