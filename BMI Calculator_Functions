@@ -1,28 +1,26 @@
-def bmi_calculator(weight, height):
-    print(weight/height**2)
+#Patients' BMI auto calculations
 
-weight = int(input("Enter your weight in kilograms: "))
-height = int(input("Enter your height in cm: "))
+def patient_details(name, age, weight1, height1):
+    bmi_calculator = weight1/(height1**2)*10000
+    bmi_score = bmi_calculator
+    print(f"{name} is {age} years old, height is {height1} cm, weight is {weight1} kg with a BMI assessment of {bmi_score:.2f}")
 
-try:
-    result = weight/(height**2)
-except ZeroDivisionError:
-    print("Error: Cannot divide by zero.")
+    if bmi_score <= 18.5:
+        print("Patient is Underweight")
+    elif bmi_score >= 18.5 and bmi_score <= 24.9:
+        print("Patient is Overweight")
+    elif bmi_score >= 25 and bmi_score <= 29.9:
+        print("Patient is Obese")
+    elif bmi_score >= 30:
+        print("Patient is Class 1 Obese")
+    elif bmi_score >= 30 and bmi_score <= 34.9:
+        print("Patient is Class 2 Obese")
+    elif bmi_score >= 35 and bmi_score <= 39.9:
+        print("Patient is Class 3 Obese")
+    else:
+        print("Patient is Severely Obese")
 
-result = (weight/height**2)*10000
-print(f"Your BMI is: {result}")
-
-if result <= 18.5:
-    print("You are Underweight")
-elif result >= 18.5 and result <= 24.9:
-    print("You are Overweight")
-elif result >= 25 and result <= 29.9:
-    print("You are Obese")
-elif result >= 30:
-    print("You are Class 1 Obese")
-elif result >= 30 and result <= 34.9:
-    print("You are Class 2 Obese")
-elif result >= 35 and result <= 39.9:
-    print("You are Class 3 Obese")
-else:
-    print("You are Severely Obese")
+patient_details(name = "John", age = 30, weight1 = 100, height1 = 160)
+patient_details(name = "Sarah", age = 21, weight1 = 80, height1 = 180)
+patient_details(name = "Adam", age = 40, weight1 = 120, height1 = 170)
+patient_details(name = "Amy", age = 25, weight1 = 75, height1 = 175)
