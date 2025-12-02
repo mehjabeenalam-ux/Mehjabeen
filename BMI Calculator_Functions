@@ -1,0 +1,28 @@
+def bmi_calculator(weight, height):
+    print(weight/height**2)
+
+weight = int(input("Enter your weight in kilograms: "))
+height = int(input("Enter your height in cm: "))
+
+try:
+    result = weight/(height**2)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+result = (weight/height**2)*10000
+print(f"Your BMI is: {result}")
+
+if result <= 18.5:
+    print("You are Underweight")
+elif result >= 18.5 and result <= 24.9:
+    print("You are Overweight")
+elif result >= 25 and result <= 29.9:
+    print("You are Obese")
+elif result >= 30:
+    print("You are Class 1 Obese")
+elif result >= 30 and result <= 34.9:
+    print("You are Class 2 Obese")
+elif result >= 35 and result <= 39.9:
+    print("You are Class 3 Obese")
+else:
+    print("You are Severely Obese")
