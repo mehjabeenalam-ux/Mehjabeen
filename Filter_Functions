@@ -1,0 +1,18 @@
+#Filter Function**********************************************
+
+my_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+evens = list(filter(lambda x: x % 2 == 0, my_numbers))
+print(evens)
+
+odds = list(filter(lambda x: x % 2 == 1, my_numbers))
+print(odds)
+
+multis_5 = list(filter(lambda x: x % 5 == 0, my_numbers))
+print(multis_5)
+
+multis_3 = list(filter(lambda x: x % 3 == 0, my_numbers))
+print(multis_3)
+
+multis_11 = list(filter(lambda x: x % 11 == 0, my_numbers))
+print(multis_11)
