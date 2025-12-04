@@ -1,0 +1,49 @@
+#Basic Lambda Function Example with a Single Parameter 
+
+add_2 = lambda x:x+1
+
+result_1 = add_2(1)
+
+print(result_1)
+
+# #Basic Lambda Function Example with Two Parameters
+
+#Addition
+
+add_1 = lambda x, y: x+y
+
+result = add_1(1,7)
+
+print(result)
+
+# #Subtraction
+
+sub_1 = lambda x, y: x-y
+
+result = sub_1(10,7)
+
+print(result)
+
+
+# #Multiplication
+
+mult_1 = lambda x, y: x*y
+
+result = mult_1(10,7)
+
+print(result)
+
+# #Division
+
+div_1 = lambda x, y: x/y
+
+result = div_1(100,10)
+
+print(result)
+
+# #Modulus
+
+mods_1 = lambda x, y: x%y
+
+result = mods_1(10,7)
+print(result)
