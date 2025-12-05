@@ -1,0 +1,32 @@
+#Error handling with Try Except Block 
+
+#Ensuring num2 in division is not 0 to prevent the program from crashing by writing a try except block 
+
+try:
+    num1 = float(input("Enter the numerator: "))
+    num2 = float(input("Enter the denominator: "))
+    result = num1 / num2
+    print(f"The result is: {result}")
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero.")
+
+#Performing Arithmetic Operations
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+division = num1/num2
+floor = num1 // num2
+modulus = num1 % num2
+square = num1**2
+cube = num1**3
+
+#Print Results
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Floor:", floor)
+print("Modulus:", modulus)
+print("Square:", square)
+print("Cube:", cube)
