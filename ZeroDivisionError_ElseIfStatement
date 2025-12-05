@@ -1,0 +1,34 @@
+#Calculator Exercise from Girl Coder Singham YouTube Channel
+
+#User Input
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+#Performing Arithmetic Operations
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
+division = num1/num2
+floor = num1 // num2
+modulus = num1 % num2
+square = num1**2
+cube = num1**3
+
+#Ensuring num2 in division is not 0 to prevent the program from crashing by writing an if else statement 
+
+if num2 != 0:
+    division = num1/num2
+else: 
+    print("Error: Division not possible if denominator is 0")
+
+
+#Print Results
+
+print("Addition:", addition)
+print("Subtraction:", subtraction)
+print("Multiplication:", multiplication)
+print("Division:", division)
+print("Floor:", floor)
+print("Modulus:", modulus)
+print("Square:", square)
+print("Cube:", cube)
