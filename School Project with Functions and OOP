@@ -1,0 +1,80 @@
+#School Project to store and calculate names and grades of 10 Students
+
+#Method 1 Function
+
+#Storing the name and grades and calculating grades based on scores for 10 sudents in a school Using Functions
+
+def calculate_grade(score):
+    if score >= 80:
+        return "A"
+    elif score >= 70:
+        return "B"
+    elif score >=60:
+        return "C"
+    elif score >= 50:
+        return "D"
+    else:
+        return "F"
+
+def print_statement(name, score):
+    grade = calculate_grade(score)
+    print(f"Student: {name}, Score: {score}, Grade: {grade}")
+
+print_statement("John", 80)
+print_statement("Amy", 90)
+print_statement("Sara", 50)
+print_statement("Milton", 70)
+print_statement("Annie", 20)
+print_statement("Fred", 55)
+print_statement("Dickson", 77)
+print_statement("Bill", 89)
+print_statement("Larissa", 100)
+print_statement("Ken", 65)
+
+
+# Method 2 OOP
+
+# Repeating the same task using OOP
+class Student:
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score #Instance of Class Created (Blueprint for Object)  
+    #Encapsulation using Logic 
+    def calculate_grade(self):
+        if self.score >= 80:
+            return "A"
+        elif self.score >= 70:
+            return "B"
+        elif self.score >=60:
+            return "C"
+        elif self.score >= 50:
+            return "D"
+        else:
+            return "F"
+    def display(self):
+        print(f"Student: {self.name}, Score: {self.score}, Grade: {self.calculate_grade()}")
+
+#Creating Objects
+s1 = Student("John", 80)
+s2 = Student("Amy", 90)
+s3 = Student("Sara", 50)
+s4 = Student("Amy", 90)
+s5 = Student("Milton", 70)
+s6 = Student("Annie", 20)
+s7 = Student("Fred", 55)
+s8 = Student("Dickson", 77)
+s8 = Student("Bill", 89)
+s9 = Student("Larissa", 100)
+s10 = Student("Ken", 65)
+
+#Using Object methods
+s1.display()
+s2.display()
+s3.display()
+s4.display()
+s5.display()
+s6.display()
+s7.display()
+s8.display()
+s9.display()
+s10.display()
