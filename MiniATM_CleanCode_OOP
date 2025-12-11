@@ -1,0 +1,112 @@
+#Mini ATM Project
+
+# Step 1 — Create the BankAccount class (Encapsulation)
+
+# Goal: balance must be private and only change through safe methods.
+
+class BankAccount:
+    def __init__(self, owner, card_number, pin, opening_balance=0):
+        self.owner = owner
+        self.card_number = card_number
+        self.__pin = pin               # private (hidden)
+        self.__balance = float(opening_balance)  # private (hidden)
+
+    # ---- safe access (getter) ----
+    def get_balance(self):
+        return self.__balance
+
+    # ---- security check (private data protected) ----
+    def verify_pin(self, pin):
+        return pin == self.__pin
+
+    # ---- operations (controlled changes) ----
+    def deposit(self, amount):
+        if amount <= 0:
+            return "Deposit must be positive."
+        self.__balance += amount
+        return f"Deposited {amount:.2f}. New balance: {self.__balance:.2f}"
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            return "Withdrawal must be positive."
+        if amount > self.__balance:
+            return "Insufficient balance."
+        self.__balance -= amount
+        return f"Withdrew {amount:.2f}. New balance: {self.__balance:.2f}"
+
+# Step 2 — Create the ATM class (the “machine” that talks to accounts)
+
+# Goal: ATM handles login + menu + calls account methods (so the account remains in control of money).
+
+class ATM:
+    def __init__(self, accounts):
+        # accounts is a dictionary: {card_number: BankAccount object}
+        self.accounts = accounts
+        self.current_account = None
+
+    def login(self, card_number, pin):
+        account = self.accounts.get(card_number)
+        if not account:
+            return "Card not found."
+
+        if not account.verify_pin(pin):
+            return "Wrong PIN."
+        self.current_account = account
+        return f"Welcome {account.owner}!"
+
+    def logout(self):
+        self.current_account = None
+        return "Logged out."
+
+    def show_menu(self):
+        return (
+            "\n1) Check Balance\n"
+            "2) Deposit\n"
+            "3) Withdraw\n"
+            "4) Logout\n"
+            "Choose: "
+        )
+
+#Step 3 — Build the interactive ATM loop (what you run)
+
+#This is the part that makes it feel like a real ATM.
+
+def main():
+    # --- sample data (like a tiny bank database) ---
+    accounts = {
+        "1111-2222-3333-4444": BankAccount("Amina", "1111-2222-3333-4444", "1234", 1200),
+        "9999-8888-7777-6666": BankAccount("Rafi",  "9999-8888-7777-6666", "4321", 500),
+    }
+
+    atm = ATM(accounts)
+
+    while True:
+        if atm.current_account is None:
+            print("\n=== WELCOME TO MINI ATM ===")
+            card = input("Enter card number (or 'exit'): ").strip()
+            if card.lower() == "exit":
+                print("Bye!")
+                break
+            pin = input("Enter PIN: ").strip()
+            print(atm.login(card, pin))
+            continue
+
+        # user is logged in
+        choice = input(atm.show_menu()).strip()
+
+        if choice == "1":
+            print(f"Balance: {atm.current_account.get_balance():.2f}")
+        elif choice == "2":
+            amt = float(input("Deposit amount: "))
+            print(atm.current_account.deposit(amt))
+        elif choice == "3":
+            amt = float(input("Withdraw amount: "))
+            print(atm.current_account.withdraw(amt))
+        elif choice == "4":
+            print(atm.logout())
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
+
